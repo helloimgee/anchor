@@ -1,0 +1,31 @@
+#wrap {
+  width: 960px;
+  margin: 0 auto;
+  background-color: aquamarine;
+  /* 블록단위 요소일 경우 가운데 정렬 */
+}
+#wrap > header {
+  background-color: black;
+  display: flex;
+  color: white;
+}
+#wrap > header > #logo {
+  font-size: 35px;
+  font-weight: bold;
+  padding-left: 15px 0px;
+}
+/* wrap 안에 있는 직계 헤더에만 */
+/* flex: 옆으로 정렬 */
+/* font-weight: 폰트 무게, bold는 두껍게 */
+#wrap > header > nav {
+  flex: 1;
+}
+#wrap > header > nav > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+#wrap > header > nav > ul > li {
+  text-align: center;
+}
+/* 글자를 정렬 */

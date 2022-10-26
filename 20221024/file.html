@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>파일, 숨김</title>
+</head>
+<body>
+  <h3>파일, 숨김</h3>
+  <form enctype="multipart/form-data">
+  <input type="file">
+  <!-- 전송시키려면 form에 특이한 속성 붙여야 한다: form enctype(없으면 파일 이름 a.jpg만 전송된다)-->
+  <input type="hidden" value="5"> 
+  <!-- 사용자한테는 안 보여주고 내부적으로만 숨겨서 데이터 가져갈 때(name이라는 이름으로 전송됨) -->
+</form>
+</body>
+</html>

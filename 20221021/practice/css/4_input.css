@@ -1,0 +1,45 @@
+* { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#container {
+  width: 480px;
+  margin: 40px auto;
+}
+fieldset {
+  padding: 15px;
+}
+fieldset legend {
+  font-weight: bold;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+li {
+  margin: 10px;
+}
+#shipping li label {
+  width: 80px;
+  float: left;   /* float: left 하는 순간 정렬되어버림 뭐지? */
+  text-align: left;
+}
+input[type="text"], input[type="tel"], input[type="email"] {
+  width: 300px;
+}
+
+/* 버튼 */
+form > div {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;  /* 균형있게 배치됨 */
+}
+form > div > input[type="submit"],input[type="reset"] {
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #ccc;
+}

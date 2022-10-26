@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>숫자 입력 필드</title>
+</head>
+<body>
+  <form action="#" method="GET">
+    <!-- 전송하려면 form 필요 #=자기 자신 / action=데이터가 넘어가는 주소 method 안 써줘도 기본으로 get -->
+    <h3>Number</h3>
+    <ul>
+      <li><input type="checkbox"> 선물용 3kg <input type="number" max="5" min="0" step="2" value="2" name="num">개 (최대 5개)</li>
+      <!-- max 최대값:직접 입력하면 써지긴 하는데, 전송할 때 막아준다 '값은 5 이하여야 합니다' / value=디폴트값 -->
+      <li><input type="checkbox" max="3" min="0"> 선물용 5kg <input type="number" name="gift">개 (최대 3개)</li>
+    </ul>
+    <hr>
+    <h3>Range</h3>
+    <ul>
+      <li><input type="checkbox"> 선물용 3kg <input type="range" name="rng"
+        max="5" min="0" step="2" value="2" id="rng1">개 (최대 5개)<input type="text" readonly size="5" value="2" id="cnt1"></li>
+      <li><input type="checkbox"> 선물용 5kg <input type="range">개 (최대 3개)</li>
+    </ul>
+    <input type="submit" value="등록">
+</form>
+    <!-- 버튼에서 value는 기본값이 아니라 버튼 위의 '글자' -->
+    <!-- name 이름 같으면 전송될 때 묶어서 배열로 전송된다; radio처럼 -->
+    <!-- 값이 안 보이니까 표시하려면: 자바스크립트 써야함 -->
+    <!-- 패턴 똑같으니까 나중에는 반복문으로 실행 가능 -->
+</body>
+</html>

@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  /* 태어나자마자 요소의 바깥 여백 margin을 갖는다 (body, p 등) */
+}
+h6 {
+  font-size: 24px;
+  text-decoration: underline;
+  /* underline은 decoration 뒤에 뭐 안 써줘도 됨 */
+}
+.tit {
+  color:chocolate;
+}
+#myH6 {
+  color: red;
+}
+/* 밑에 있고, 아이디니까 우선순위 */
+h3, h6, .tit, #myH6 {
+  background-color:antiquewhite
+}
+/* ,(쉼표): 불연속적 동시선택(ctrl+선택이랑 같다) = 두번 적는 것보다 */

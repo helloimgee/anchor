@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 개요</title>
+  <style>
+    p {
+      /* 내부 스타일 시트 */
+      color: red;
+      text-decoration: underline;
+    }
+  </style>
+  <!-- 외부 스타일시트 -->
+  <link rel="stylesheet" href="css/initcss.css">
+</head>
+<body>
+  <h3>CSS 개요</h3>
+  <p style="color:chartreuse; text-decoration-style:dashed; text-decoration-thickness: 1px; text-decoration-line:underline;">인라인 스타일시트</p>
+  <!-- text-decoration-뒤에 style,thickness 이런 거 적어줘야 함 -->
+  <p>내부 스타일시트</p>
+  <p>외부 스타일시트</p> 
+  <p>기본적으로 선택자가 같으면 아래의 선택자가 적용</p>
+  <p>스타일 우선순위</p>
+  <ol>
+    <li>사용자 스타일(os에서 적용)</li>
+    <li>제작자 스타일(css에서 적용</li>
+    <li>브라우저 기본 스타일(브라우저에서 적용)</li>
+    <!-- 브라우저 기본 스타일: F12 - 사용자 에이전트 스타일시트 (사용자가 윈도우에서 적용해놓은 건 적용이 안 된다) -->
+  </ol>
+  <hr>
+  <h3>제작자 스타일 시트</h3>
+  <p><a href="https://opentutorials.org/module/484/4149" target="_blank">우선순위 계산</a></p>
+  <ol>
+    <li>!important</li>
+    <li>인라인 스타일시트(1000점)</li>
+    <!-- 외부/내부는 밑에 있을수록 -->
+    <li>id 선택자(100점)</li>
+    <li>class 선택자, 가상 class / 가상선택자: (10점)</li>
+    <li>Tag 선택자, 요소 (1점)</li>
+    <li>전체 선택자 * / 부정 선택자:not(p) (0점)</li>
+  </ol>
+  <!-- 하나만 쓰는게 아니고 섞여서 조합되서 쓰이는데, 계산해서
+    1) 점수가 높은 선택자
+    2) 점수가 같을 때: 나중에 작성된 스타일 적용 -->
+  <!-- 다양한 방식으로 읽을 수 있다
+    1) p 태그
+    2) body의 몇 번째 자식 -->
+  <!-- 우선순위
+  1) 인라인
+  2) 아래에 있는 것 (위 예시에서는 외부.css가 더 아래 있으니까 더 우위)  -->
+  
+<style>
+    body {
+      color:cornflowerblue;
+    }
+    body p {
+      color: black;
+    }
+    /* 기본적으로는 밑에 있는 게 이기지만, 선택자값 계산해서 더 크면 큰 놈이 적용됨 = body 안에 있는 모든 p (2점) > p */
+    h1 { 
+      color: brown !important;
+    }
+    p {
+      color: blue;
+    }
+  </style>
+    <h1 style="color:green;">레드향<h1>
+    <p style="color: red;">껍질에 붉은 빛이 돌아 레드향이라 불린다
+    <p>레드향은 한라봉과 귤을 교배한 것으로
+    <p>일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.
+      <!-- 중요: 우선순위, 적용 방법 -->
+</body>
+</html>

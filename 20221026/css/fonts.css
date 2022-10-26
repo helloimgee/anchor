@@ -1,0 +1,29 @@
+.vw {
+  font-size: 10vw; /*viewport 넓이의 10%*/
+}
+.vh {
+  font-size: 10vh; /*viewwport 높이의 1%*/
+}
+.wave {
+  text-decoration-style: wavy;
+  text-decoration-color: blueviolet;
+  text-decoration-thickness: 2px;
+  text-decoration-line: underline;
+} /*많이 쓰는 것들 class로 만들어놓고 필요한 요소에 갖다 쓰면 되겠지*/
+ul {
+  list-style: none;
+}
+ul li {
+  border: 1px solid black;
+  /* border 3개 합쳐진 것 */
+  padding: 15px 32px; 
+  /* padding 값 
+  1개: 상하좌우
+  2개: 상하-좌우 
+  3개: 상-좌우-하
+  4개: 상-우-하-좌(시계방향) */
+  /* 좌,상하만 적용됨 / 우측은 남은 거 다 */
+  margin-bottom: 5px;
+  /* margin: 요소 바깥 여백 (아래쪽만-bottom) */
+}
+/* 한칸 떨어뜨리면: 하위 자식 모두 (ul 안의 모든 li) */

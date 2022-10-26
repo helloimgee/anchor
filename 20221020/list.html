@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>목록만들기</title>
+</head>
+<body>
+  <h3>목록만들기</h3>
+  <p>ol, ul, dl 태그들을 이용하여 리스트를 만듦(메뉴)</p>
+  <p style="color; red">※ol, ul 자식요소는 li태그만 가능</p>
+  <pre>
+&lt;ol&gt;
+  &lt;li&gt;항목&lt;/li&gt;
+  &lt;li&gt;항목&lt;/li&gt;
+  &lt;li&gt;항목&lt;/li&gt;
+  &lt;li&gt;항목&lt;/li&gt;   
+&lt;/ol&gt;
+  </pre>
+  <!-- &lt꺾쇠&gt를 나타내는 엔티티 <>쓰니까 태그 적용이 되어버려서-->
+  <p>type은 종류 설정(1,a,A,i,I), start는 시작 위치지정</p>
+  <ol type="a" start="3">
+    <li>항목</li>
+    <li>항목</li>
+    <li>항목</li>
+    <li>항목</li>
+  </ol>
+  <hr>
+  <p></p>
+  <ul>
+    <li>
+      항목
+      <ul>
+        <li>
+          항목
+          <ul>
+            <li>항목</li>
+            <li>항목</li>
+            <li>항목</li>
+          </ul>    
+      </ul>
+  </ul>
+<hr>
+  <dl>
+    <dt>단어,용어</dt>
+    <dd>설명구1</dd>
+    <dd>설명구2</dd>
+  </dl>
+</body>
+</html>

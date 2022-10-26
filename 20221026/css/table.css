@@ -1,0 +1,30 @@
+/* 모든 후손 */
+table {
+  caption-side: bottom; /* 기본값: top */
+  border: 1px solid black; /* 바깥쪽 표만 테두리 */
+  border-spacing: 10px; /* collapse 지정 안 할 때 적용 */
+  border-collapse: collapse; /* 단일선으로. border-spacing이 없어진다. 기본값 seperate */
+}
+table caption {}
+table thead {}
+table tbody {}
+table tr {}
+table th {
+  border-bottom: 2px solid red !important;
+}
+table td {}
+table th, table td {
+  border: 1px dotted black; /* 같은 2점=밑에 있는 놈이 이김 */
+  padding: 10px;
+  text-align: center;
+} 
+
+/* 직계 자식 (차례대로 파고 들어감) */
+table {}
+table > caption {}
+table > thead
+table > thead > tr {}
+table > thead > tr > th {}
+table > tbody {}
+table > tbody > tr {}
+table > tbody > tr > td {}

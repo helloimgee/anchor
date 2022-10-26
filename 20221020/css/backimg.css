@@ -1,0 +1,8 @@
+body {
+  background-image: url(/anchor/img/a.jpg); 
+}
+p {
+  height: 50%;
+  background-image: url('https://kgo.googleusercontent.com/profile_vrt_raw_bytes_1587515358_10512.png');
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>글꼴 관련 스타일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- 주소를 미리 연결(빠르게 연결하기 위함) -->
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <!-- 실제 글꼴을 위함(이거만 있어도 되긴 함) / 다른 걸로 바꾸거나 추가할 때 이거만 수정하면 됨 -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <!-- 밑에 있을수록 최신 = 우리것이 밑에 있어야함 (위에 거 칠 수 있게) -->
+</head>
+<body>
+  <h3>글꼴 관련 스타일</h3>
+  <p>글꼴 관련 스타일</p>
+  <p id="first">글꼴 관련 스타일</p>
+  <p class="second">글꼴 관련 스타일 My Lover Font Test</p>
+  <p class="second imp">글꼴 관련 스타일 Test</p>
+  <!-- class 이름 2개 줄 수도 있다 -->
+  <hr>
+  <table>
+    <caption>css에서 사용되는 크기 단위</caption>
+    <tr>
+      <th>종류</th>
+      <th>설명</th>
+    </tr>
+    <tr>
+      <td><strong>em</strong></td>
+      <td id="em">부모 요소에서 지정한 글꼴의 대문자 M의 넓이 기준</td>
+    </tr>
+    <tr>
+      <td><strong>rem</strong></td>
+      <td id="rem">html태그(root태그)에서 지정한 글꼴의 대문자 M의 넓이 기준</td>
+    </tr>
+    <tr>
+      <td><strong>px</strong></td>
+      <td>모니터의 1픽셀 기준</td>
+    </tr>
+    <!-- 모니터마다 픽셀 크기 다르다 -->
+    <tr>
+      <td><strong>%</strong></td>
+      <td>부모 기준의 %</td>
+      <!-- %: em과 거의 같다 (주로 넓이에 쓴다, 글자에 잘 안 씀) -->
+    </tr>
+  </table>
+  <h3>line-height</h3>
+  <div>중앙</div>
+</body>
+</html>

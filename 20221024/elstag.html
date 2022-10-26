@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>나머지 태그</title>
+  <style>
+    textarea { 
+      resize: none;
+      /* textarea 크기조절 방지 / both, vertical, horizontal */
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <textarea cols="20" rows="10">
+    </textarea>
+      <!-- 크기 지정 속성 (스타일시트 들어가면 지정 안 해도 된다) 
+      cols="" 너비 지정(들어가는 문자의 개수)
+      row="" 높이 지정(들어가는 행의 개수) -->
+      <!-- 넘어가면 스크롤바 생긴다 / 우측하단 드래그해서 크기 조정 가능-->
+    <hr>
+      <label for="item">상품선택</label>
+      <select id="item">
+        <!-- multiple:여러개 선택 가능 / shift+선택(연속 선택) / ctrl+선택(비연속 선택) / size=사이즈 조절 가능 -->
+        <option value="">선택</option>
+        <!-- value="" 값 없음 -->
+        <optgroup label="선물용">
+          <!-- 그룹 만들기 / 선택은 불가능(사용자 보기 좋게만) -->
+          <option value="p3">선물용 3kg</option>
+          <option value="p5" selected>선물용 5kg</option>
+        </optgroup>
+        <optgroup label="가정용">
+          <option value="h3">가정용 3kg</option>
+          <option value="h5">가정용 5kg</option>
+          <!-- select 하면 option이라는 애가 무조건 들어간다 -->
+          <!-- 기본값 지정 selected 속성 (readio=checked / input=value) -->
+          <!-- value가 없으면 글자가 전송됨 -->
+        </optgroup>
+      </select>
+      <hr>
+      <input type="text" list="myList">
+      <datalist id="myList">
+        <!-- list 이름 = datalist 아이디 맞춰주기 -->
+        <option value="1">선물 포장</option>
+        <option value="2">포장 안 함</option>
+        <!-- 글자를 쓸 수도 있고, 2개 중 하나를 선택할 수도 있다 -->
+        <!-- value 있으면 value 값, 없으면 글자가 전송됨 / value는 표시됨 -->
+      </datalist>
+      <hr>
+      <input type="button" value="전송">
+      <button><img src="/anchor/img/hs.png" alt="효성">전송</button>
+      <!-- input type="button"이랑 조금 다르다 / 모양은 같음 / 자바스크립트 하면 모든 것에 이벤트 걸어줄 수 있어서 이런 버튼 필요 없음 -->
+      <!-- button은 안에 다른 여러 요소 포함 가능(이거 빼곤 거의 같다) -->
+  </form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+table, table th, table td  {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px 15px;
+}
+/* solid: 단선 */
+/* table th = table > th 테이블 안의 th태그
+- "한 칸 띄우기" = 후손들 전부(저 멀리 있어도 선택)
+- ">" = 직계 자식 (직계로 하려면 table > tbody > td = tbody를 거쳐야 한다 
+- table th, table td
+- table > thead > tr > th,
+- table > tbody > tr > td
+- table > tfoot > tr > td 
+- tbody > tr > th l td */
+/* 쉼표=불연속적으로 선택하겠다 */
+/* 이중선 깨주기 border-collapse: collapse  */
+/* 꽉 차있으니까 보기 싫다 여백 주기 */
+td {
+  text-align: center;
+}
+thead, tfoot {
+  background-color: lightgrey
+}
+table > thead > tr {
+  background-color: red;
+}
+/* 모든 tr 중에서 첫번째 tr(행) */
+/* 행을 잡는 건 잡기 쉬운데 열을 잡는 건 복잡하다 -> colgroup */
+/* table > tbody > tr > td:first-child { 
+  background-color: green;
+} */
+colgroup > col:first-child {
+  background-color: crimson !important;
+}
+/* 훨씬 잡기 쉽다: colgroup의 몇 번째인지만 알면 된다 */
+/* :nth-child() = col:nth-child(3) 3번째  
+참고: 선택자selector(w3schools - css - css reference - css selectors */
+colgroup > col:nth-child(2) {
+  background-color:cornflowerblue;
+}

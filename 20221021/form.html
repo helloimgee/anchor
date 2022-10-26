@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>폼 삽입하기</title>
+</head>
+<body>
+  <h3>폼 삽입하기</h3>
+  <p>사용자에게 정보를 입력받아 데이터를 전송</p>
+  <!-- 전송하는 게 있으니까 받는 것도 있겠지 -->
+  <form method="GET" name="myform" target="_self" action="formresult.html" autocomplete="on" userName="사용자의이름">
+    <!-- 
+    [1] GET: 주소창에 묻어 들어가는 방식 
+    [2] POST: 주소창에 안 보이고, 문서 head에 묻어들어간다 -->
+    <!-- 사용자한테 받는 내용이 들어갈 것 -->
+    <!-- form태그는 method / action -->
+    <!-- userName 속성은 뭐지? -->
+    <fieldset>
+      <!-- fieldset: 테두리를 지어준다 (form안/밖 모두 가능) / 기능 있는 건 아니고 모양일 뿐. 그룹 시켜줄 수 있다 별로 중요하지 않다 -->
+      <legend>로그인</legend>
+      <!-- legned: 테두리의 이름 -->
+      <label for="userName">이름</label>
+      <!-- 뭐 써야할지 모르니까 값이 뭔지 알려주는 거 -->
+      <!-- for 이용하면 감싸지 않아도 그룹으로 만들어줌 = 클릭하면 커서 깜빡이게 해줌 
+      for 이용 안할 경우 <label><input></label> -->
+      <input type="text" name="userName" placeholder="이름을 입력하세요." value="값" id="userName">
+      <!-- placeholder: 실제 값은 아닌데 예시 제공
+      value: 실제 값 / 같이 써놓으면 값 지우면 이름 등장함 -->
+      <!-- laber = input id 맞춰주기 = 멀리 떨어뜨려놓아도 누르면 깜빡거림 -->
+      <!-- laber for ~ userName 까지가 중요 -->
+      <!-- name, id 차이점? -->
+      <label for="userAge">나이</label>
+      <input type="number" name="userAge" placeholder="나이를 입력하세요." id="userAge">
+      <input type="submit">
+      <!-- input type 종류 많다(다 쓰지는 않음) p130 / 숫자를 받겠다 ->
+      안 써도 text다 / 단일 태그라서 안 닫아줘도 됨
+      전송 submit (버튼) / value="" -->
+    </fieldset>
+    </form>
+  <!-- 중요 속성 3가지 123p 
+  method: 데이터가 어떻게 전송될지 나타내는 방법
+  action: 데이터가 전송될 곳 (일단 네이버로.. 처리는 안하겠지만. 백엔드에서 처리하는 방법 배울 것. 자바로도 처리할 수 있긴 함)
+  target: 변경될 곳?
+-->
+<!-- autocomplete 속성: 자동 완성(on) input마다 따로 줄 수도 있다 -->
+<!-- 전송하면 주소 바뀐다 https://www.naver.com/?userName=%EC%9D%B4%EB%A6%84 -->
+<!-- name="userName" = ?userName -->
+  <form method="GET" name="myform" action="https://www.naver.com" target="_self" userName="사용자의이름">
+    <input type="text" name="userName">
+    <input type="submit">
+  </form>
+<!-- 폼 여러개로 나눌 수 있다 -->
+  <hr>
+  <form action="https://www.bing.com/search" method="GET" target="search">
+    <input type="text" name="q" autocomplete="on">
+    <!-- 검색어를 q로 / search?q=검색어... = 위 주소로 q이름으로 데이터 전송한 것 / target=iframe 안에 뜨도록 -->
+    <input type="submit">
+  </form>
+  <iframe name="search" width="100%" height="1500"><
+    /iframe>
+</body>
+</html>

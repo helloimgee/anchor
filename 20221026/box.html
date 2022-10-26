@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>박스 모델</title>
+</head>
+<body>
+  <h3>박스 모델</h3>
+  <p>태그들은 기본적으로 블록, 인라인 속성 중 하나를 가짐</p>
+  <p><a href="https://www.w3schools.com/html/html_blocks.asp" target="_blank">참조</a></p>
+  <p>블록 : 넓이가 부모의 100%</p>
+  <!-- 태어나자마자 넓이를 가진다(부모의 넓이)
+  대표적인 게 div 
+  p의 부모 body 넓이만큼 꽉 채우고 있다 -->
+  <p><span>인라인</span>: 넓이/높이가 없음</p>
+  <p><span>인라인-블록</span>: 옆에 요소가 오면서(인라인) 넓이, 높이를 가짐(블록)</p>
+  <!-- 블록+인라인 합친 것 -->
+  <p><b>사용자가 속성을 변경할 수 있음</b></p>
+  <!-- 넓이,높이 줘도 안 바뀜 0,0-->
+  <style>
+    div {
+      border: 1px solid;
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+    } /* inline-block 단점: 요소 사이에 margin이 생김 (화면분할시에는 안 쓴다) */
+    /* 실제 넓이 = content + border + padding
+    100px인데 border까지 102x102로 나옴 */
+  </style>
+  <div>d1</div><div>d2</div><div>d3</div>
+  <style>
+    .nom, .box {
+      width: 100px;
+      height: 100px;
+      border: 5px solid black;
+      outline: 10px solid pink;
+      padding: 5px;
+      margin: 20px;
+    }
+    /* '쉼표'!!!!!! */
+    .nom {
+      /*120*/
+      background-color: aqua;
+      box-shadow: 2px -2px 5px 10px;
+      border-radius: 50px; /* 원: 50px = 50% */
+    }
+    .box {
+      /*100*/
+      background-color: bisque;
+      box-sizing: border-box;
+    }
+    /* content-box 안 줘도 됨 */
+    /* border-box 다 포함해서 100px로 계산해버림 */
+    a:focus { /*focus가 가면 outline을 이렇게 만들겠다 */
+      outline: 10px ridge red; 
+      outline-offset: 5px; /* 위치 */
+      /* border 박스에는 안 들어간다, 지장 안 준다 */
+      /* chrome 기본 outline은 black 둥근 사각형 */
+    }
+    .box {
+      box-shadow: -10px -10px 20px 10px red inset;
+      border-radius: 5px; /* 반지름이 5인 원 */
+    }
+    /* 위에도 box 있지만 또 해도 상관 없다 */
+  </style>
+  <hr>
+  <div class="nom">normal</div>
+  <div class="box">box-sizing</div>
+  <!-- 기계가 자동으로 계산 -->
+  <style>
+    .hop {
+      cursor: pointer; /* 손 */
+      position: relative; /* 부모가 되어서 안의 div의 기준이 되게 */
+    }
+    .hop, .hop div {
+      height: auto;
+      width: auto;
+      border: none;
+      transition: 1s; /* 속도(바뀌는 것들의 중간 단계를 만들어준다 = 반짝 하고 늘어나던게 -> 서서히 늘어나게) */
+    }
+    .hop div {
+      width: 0; /* 0은 단위 없어도 된다 */
+      position: absolute;
+      bottom: 0;
+      left: 0; /* 위치 지정 */
+    }
+    .hop:hover { /* 마우스 포인터를 올리면(hover 없는 상태에서 바껴라) */
+      background-color: aqua;
+    }
+    .hop:hover div {
+      width: 50px;
+      border-bottom: 4px double black; /* double은 2px 이상만 됨 */
+    }
+    /* 안에 있는 자식 div(한칸 띄움) */
+    /* 이제 <hr> 잘 안 쓰고 -> border-bottom/top 둘중 하나 쓰면 됨 */
+
+    /* hover 하기 전 모양 -> hover 했을 때 바뀔 모양 따로 만들어주기 */
+  </style>
+  <div class="hop">
+    test
+    <div></div>
+  </div>
+</body>
+</html>

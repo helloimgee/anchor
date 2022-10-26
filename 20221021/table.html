@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/table.css">
+  <title>테이블</title>
+</head>
+<body>
+  <table>
+    <!-- <table border="1"> 인라인 속성 가능한데 외부 CSS로 쓴다 -->
+    <!-- 테이블 선 두께 -->
+    <caption>title</caption>
+    <!-- 테이블 제목 -->
+    <colgroup>
+      <col>
+      <col style="width:150px">
+      <col>
+    </colgroup>
+    <thead>
+    <tr>
+      <th>1행 1열</th>
+      <th>1행 2열</th>
+      <th>1행 3열</th>
+    </tr>
+    </thead>
+        <!-- 제목행: <tr>(행) 안에 <th> / 제목이라 인식해서 진하게 나온다 -->
+        <!-- thead: 테이블 헤더. 테이블 제목 -->
+    <tbody></tbody>
+   <!--  개발자 도구로 보면 tbody 안 넣었는데 들어가있다 / 스타일시트로 지정할 때 주의해야 함 -->
+    <tfoot></tfoot>
+    <!-- 별 의미는 없지만 브라우저한테 알려주기 위함. 사용자한테는 눈에 안 보인다. 안 써도 됨 -->
+    <tr>
+      <td>1행 1열</td>
+      <td>1행 2열</td>
+      <td>1행 3열</td>
+    </tr>
+    <tr>
+      <td>2행 1열</td>
+      <td>2행 2열</td>
+      <td>2행 3열</td>
+    </tr>
+  </table>
+  <hr>
+  <p>rowspan : 행 병합<br>colspan: 열 병합</p>
+  <table>
+    <tr>
+      <td rowspan="3">1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <!-- 1이랑 행끼리 합쳐지니까 <td>4</td> 지워줘야 함 / 아니면 밀려나면서 깨진다 -->
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <!-- <td>7</td> -->
+      <td colspan="2">8</td>
+      <!-- 8이랑 열로 합쳐지니까 <td>9</td> 지워줘야 함 -->
+    </tr>
+  </table>
+  <hr>
+  <table>
+    <colgroup>
+      <!-- 배경색, 셀 너비, align만 지정 가능하고 다른 건 안 된다(참고 사이트) -->
+      <col style="background-color: aqua;">
+      <!-- 첫번째 열 -->
+      <col>
+      <col span="2" style="background-color: brown; width: 150px;">
+      <!-- 같은 스타일 적용시 두 번 반복하지 않고 묶어서 작성 -->
+      <col>
+    </colgroup>
+    <!-- 열을 대표한다 -->
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>6</td>
+      <td colspan="2" rowspan="2">7</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td colspan="3">14</td>
+    </tr>
+  </table>
+  <hr>
+  <table>
+    <caption>요안도라 객실</caption>
+    <tr>
+      <thead>
+        <tr>
+          <th>방 이름</th>
+          <th>대상</th>
+          <th>크기</th>
+          <th>가격</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>유채방</td>
+          <td>여성 도미토리</td>
+          <td rowspan="3">4인실</td>
+          <td rowspan="4">1인 20,000원</td>
+        </tr>
+        <tr>
+          <td rowspan="2">동백방</td>
+          <td>동성 도미토리</td>
+        </tr>
+        <tr>
+          <td>가족 1팀</td>
+        </tr>
+        <tr>
+          <td>천혜향방</td>
+          <td>-</td>
+          <td>2인실</td>
+
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">바깥채 전체를 렌트합니다</td>
+        </tr>
+      </tfoot>
+    </tr>
+  </table>
+  <!-- 행,열 갯수 = 제일 많은 행, 열의 갯수 세라 -->
+</body>
+</html>

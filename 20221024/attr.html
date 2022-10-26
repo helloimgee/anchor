@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>input 태그의 주요 속성</title>
+</head>
+<body>
+  <h3></h3>
+  <form action="#" method="GET">
+    <h3>Number</h3>
+    <ul>
+      <li><input type="checkbox"> 선물용 3kg <input type="number" max="5" min="0" step="2" value="2" name="num" autofocus required>개 (최대 5개)</li>
+      <!-- autofocus는 하나만 있어야 한다 -->
+      <!-- required: 필수 '이 입력란을 작성하세요' -->
+      <li><input type="checkbox" max="3" min="0"> 선물용 5kg <input type="number" name="num" placeholder="5kg">개 (최대 3개)</li>
+    </ul>
+    <hr>
+    <h3>Range</h3>
+    <ul>
+      <li><input type="checkbox"> 선물용 3kg <input type="range" name="rng"
+        max="5" min="0" step="2" value="2" id="rng1">개 (최대 5개)<input type="text" readonly size="5" value="2" id="cnt1"></li>
+        <!-- readonly="on/off" 해줘도 되고 그냥 readonly만 적어도 된다 -->
+      <li><input type="checkbox"> 선물용 5kg <input type="range">개 (최대 3개)</li>
+    </ul>
+    <input type="text" required>
+    <input type="submit" value="등록">
+</form>
+</body>
+</html>
