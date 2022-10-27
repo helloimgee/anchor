@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>레이아웃</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    nav ul {
+      list-style: none;
+    }
+    nav ul li {
+      display: inline-block;
+      padding: 20px;
+      margin: 0 20px;
+      border: 1px solid #222;
+      cursor: pointer;
+      transition: .4ms; /* s: 초단위 / ms: 마이크로세컨드(1000) 
+      0.4s = 400ms
+      1s = 1000ms 
+      .4 = 0.4 (0은 안 써줘도 된다) 
+      400ms = 0.4s = .4s */
+    }
+    /* 원래 6자리인데 값이 똑같으면 1개씩만 써도 된다 22222 */
+    /* 블록요소인데 옆으로 가게 하려면  */
+    nav ul li:hover {
+      background-color: aliceblue;
+    }
+    .float {
+      float: right;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      border: 1px solid;
+    }
+    /* float 이라는 속성값도 있다
+    left: 왼쪽으로 달라붙는다 
+    float 주니까 div 옆의 margin이 없어짐*/
+    /* inline-block처럼 살짝 뜨는게 아니라 옆으로 붙음 */
+    /* float: right (오른쪽+역순 정렬) */
+    hr {
+      clear: both;
+    }
+    /* float이 left든 right든 얘한테서는 지워버리겠다 */
+    img { 
+      float: right;
+      margin: 0 0 10px 10px;
+    }
+  </style>
+</head>
+<body>
+  <h3>레이아웃</h3>
+  <nav>
+    <ul>
+      <li>menu 1</li>
+      <li>menu 2</li>
+      <li>menu 3</li>
+      <li>menu 4</li>
+    </ul>
+  </nav>
+  <!-- 시맨틱 태그: 의미를 가진 div
+    div 행을 다 차지하는 블록요소 -->
+  <hr>
+  <h3>float</h3>
+  <p>float: 요소를 수평 배치함 </p>
+  <!-- 붕붕 떠다닌다는 의미 -->
+  <div class="float">1</div>
+  <div class="float">2</div>
+  <div class="float">3</div>
+  <div>
+  <hr>
+    <img src="/anchor/img/hs.png">우는 얼마나 것은 사막이다. 착목한는 피가 것이 찬미를 관현악이며, 되는 불어 있는 곧 쓸쓸하랴? 속잎나고, 거선의 있으며, 되는 미묘한 피다. 사는가 인류의 옷을 얼음에 영원히 전인 것이다. 있는 그들의 이상을 실로 피가 청춘 듣기만 말이다. 따뜻한 소담스러운 우리 그들의 밝은 지혜는 없으면, 속에서 것이다. 새 소담스러운 못할 가슴이 품에 예가 힘있다. 거친 풍부하게 많이 인생에 보라. 위하여 사랑의 들어 무엇을 사막이다.
+
+    역사를 위하여서, 더운지라 인간에 풍부하게 청춘의 사라지지 청춘 원질이 황금시대다. 길지 끝에 수 소담스러운 전인 그들에게 운다. 따뜻한 따뜻한 있는 열락의 원질이 기쁘며, 약동하다. 사랑의 듣기만 자신과 되려니와, 뜨거운지라, 생명을 따뜻한 인류의 그림자는 봄바람이다. 인류의 얼음과 같이, 인간의 있음으로써 인도하겠다는 그들의 아니다. 바이며, 생생하며, 원대하고, 피어나기 듣는다. 새가 위하여, 온갖 수 있을 지혜는 방황하였으며, 속잎나고, 심장의 봄바람이다. 전인 이것을 끝에 청춘 가는 봄바람을 무한한 위하여 광야에서 그리하였는가? 인류의 살 설산에서 있음으로써 피다. 피고 끓는 보는 이것을 듣는다.
+    
+    장식하는 열매를 찬미를 구하기 속에 칼이다. 못할 옷을 것이다.보라, 용감하고 꽃 뿐이다. 풀밭에 무한한 사는가 충분히 가장 가슴에 말이다. 피는 많이 있으며, 불러 날카로우나 것이다. 이상은 같이, 피가 것이다. 내는 것은 사랑의 꽃이 길을 사막이다. 두손을 천하를 커다란 얼마나 그러므로 발휘하기 같으며, 사막이다. 날카로우나 품고 눈이 설레는 크고 속잎나고, 가슴이 봄바람이다. 만물은 청춘의 가슴에 그들의 그리하였는가?
+  </div>
+  <style>
+    .box1, .box2 {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      border: 1px solid black;
+      float: left;
+    }
+    .box1 {}
+    .box2 {}
+    .box3 {
+      height: 100px;
+      background-color: green;
+      clear: both;
+    }
+    .par {
+      background-color: blue;
+      overflow: hidden;
+    }
+    /* overflow: hidden; 제일 쉬운 방법 */
+    /* .par::after {
+      content: ""; /* 큰따옴표든, 작은따옴표든 공백 - content 꼭 써줘야 한다 
+      clear: both;
+      display: table;
+    } */
+    /* ::가상요소 */
+    /* table: 안의 요소를 테이블처럼 만들겠다 */
+    /* 정확하게 자식 높이 갖고 있다 */
+    
+  </style>
+  <div class="par"> <!-- 옆으로 가는 거 무조건 부모를 감싸주자-->
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box2">3</div>
+    <div class="box2">4</div>
+    ::after
+  </div>
+  <div class="box3">3</div>
+</body>
+</html>

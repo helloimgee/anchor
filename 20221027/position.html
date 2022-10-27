@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>title</title>
+  <link rel="stylesheet" href="css/position.css">
+</head>
+<body>
+  <h3>웹 요소의 위치 지정하기</h3>
+  <p>[1] static: 기본값이며 움직일 수 없음</p>
+  <p>[2] relative: 생성된 위치를 기준으로 움직임. 위치를 차지하고 있음</p>
+  <p>[3] absolute: 부모 기준(부모 만들어주는 방법: 부모 요소에게 position값을 지정; static만 아니면 된다)으로 움직임. 위치를 차지하지 않음</p>
+  <p>[4] fixed: 뷰포트 기준으로 이동. 화면에 고정</p>
+  <p>[5] sticky: 화면의 상단이 요소의 상단에 걸리면 fixed 됨</p>
+  <hr>
+  <p>겹침 설정: 기본적으로 아래 있는 요소가 위로 올라감. </p> 
+  <p>z-index로 겹침 수정 (단, 부모가 같은 요소만 지정됨)</p>
+  <!-- 부모가 다르고, 부모가 지고 있으면 아무리 z-index로 올려도 안 올라간다
+  부모가 먼저 이겨야 자식이 이길 수 있다 -->
+  <!-- z축: 사용자와 모니터 사이의 거리(3d) -->
+  <!-- 보통 relative를 주로 준다 -->
+  <div class="static">static</div>
+  <!-- 얘가 움직여도 그 자리에 아무도 못 들어간다 -->
+  <div class="relative">relative</div>
+  <div class="static">static</div>
+  <div class="parents">
+    <div class="absolute">absolute</div>
+  </div>
+  <div class="static">static</div>
+  <!-- absolute가 붕 떠서 아래 static이 밑으로 들어간 거 -->
+  <div class="fixed">fixed</div>
+  <!-- 뷰포트 기준. 얘도 붕 뜬다 붕 떠서 날아다님 -->
+  <div class="static">static</div>
+  <div class="sticky">sticky</div>
+  <div class="static">static</div>
+  <div class="static">static</div>
+  <div class="static">static</div>
+  <div class="static">static</div>
+  <div class="static">static</div>
+  <div class="static">static</div>
+  <div class="static">static</div>
+  <div class="static">static</div>
+  <div class="static">static</div>
+  <div class="static">static</div>
+  <div class="static">static</div>
+  <div class="static">static</div>
+  <div class="static">static</div>
+  <div class="static">static</div>
+  <div class="parents">
+    <div class="absolute red">1</div>
+    <div class="absolute green">2</div>
+    <div class="absolute blue">3</div>
+    <!-- 밑에 있을수록 최신이다(위에 있는 것 삭제) = 위에 올라와있다 -->
+  </div>
+</body>
+</html>
+<!-- float, position만 있으면 웬만한 홈페이지 만들 수 있다 (연습) -->

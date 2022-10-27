@@ -1,0 +1,78 @@
+div {
+  width: 100px;
+  height: 100px;
+}
+/* 블록 요소 특징 다 갖고 있는데 넓이 강제로 바꿔놓은 것 */
+
+.static {
+  position: static;
+  background-color: red;
+}
+
+.relative {
+  position: relative;
+  background-color: green;
+  top: 20px;
+  left: 60px;
+}
+/* 만들어진 위치가 자기의 움직이는 기준이 된다 */
+.absolute {
+  background: aqua;
+  position: absolute;
+  top: 150px;
+  left: 75px;
+}
+/* display:block 하고 거리가 멀어진다 float 처럼 붕 떠버리고 넓이 높이 사라진다
+모든 요소마다 높이는 다 없다
+대신 안에 그림 같은 거 넣어주는데
+margin 값이 없어진다 */
+/* 얘 부모가 없기 때문에 윈도우 기준으로 움직일 것 */
+/* relative와 달리 자리도 안 차지한다 */
+.parents {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  background-color:aliceblue;
+}
+/* div 때문에 100px, 100px일텐데 강제로 줌 */
+
+.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: blue;
+}
+/* 문서가 아니라 뷰포트 기준 */
+.sticky {
+  position: sticky;
+  background-color: blueviolet;
+  top: 0;
+  left: 100px;
+}
+/* top값이 꼭 필요(그래야 움직인다)
+없으면 relative 쓴 거랑 같다 */
+/* 처음에는 relative와 같은데, top:0에 걸리는 순간부터 fixed 처럼 움직인다 
+top값 = 걸리는 거리, 시작점 나타낸다 */
+/* 수직에 관한 것. 수평은 위치 우리가 지정할 수 있다 */
+
+.red {
+  background-color: red;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+}
+/* z-index: 기본값이 0 
+값이 높을수록 앞쪽으로 나온다 
+9999 이렇게 막 올려놓는 사람도 있다 */
+.green {
+  background-color: green;
+  top: 100px;
+  left: 100px;
+  z-index: 2;
+}
+.blue {
+  background-color: blue;
+  top: 150px;
+  left: 150px;
+  z-index: 0;
+}

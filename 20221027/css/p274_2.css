@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrap {
+  background-color: red;
+  width: 1200px;
+  margin: 0 auto;
+  border: 2px solid;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* transform 모르겠다 */
+
+.header {
+  background-color: orange;
+  height: 120px;
+  border-bottom: 2px solid;
+}
+
+.main > div {
+  float: left;
+  height: 600px;
+}
+/* div 전부에 줘야하는 게 아니라, 
+첫번째 자식 1개에만 줘도 되는 거? */
+
+.main > div.l-side {
+  background-color: green;
+  width: 248px;
+  border-right: 2px solid;
+}
+
+.main > div.content {
+  background-color: blue;
+  width: 800px;
+}
+
+.main > div.r-side {
+  background-color: purple;
+  width: 148px;
+  border-left: 2px solid;
+}
+
+.main::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.footer {
+  background-color: grey;
+  height: 100px;
+  border-top: 2px solid;
+}
+
+/* .clearfix::after { 
+    content: "";
+    clear: both;
+    display: table;
+} */
